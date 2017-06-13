@@ -2,7 +2,9 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
 
-    <pre>{{ $store.state }}</pre>
+    <details open>
+      <pre>{{ $store.state }}</pre>
+    </details>
 
   </div>
 </template>
@@ -12,7 +14,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'App State:'
     }
   }
 }

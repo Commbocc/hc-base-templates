@@ -3,10 +3,16 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+// modules
+import { nav } from '@/modules/hc-nav'
+
 export const store = new Vuex.Store({
-  modules: {},
+  modules: {
+    nav
+  },
   state: {
-    lorem: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    site_title: 'Hillsborough County, Fl',
+    base_url: 'http://hflgov.net'
   },
   getters: {},
   mutatons: {},

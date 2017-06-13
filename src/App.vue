@@ -1,12 +1,23 @@
 <template>
-  <div id="app">  
-    <router-view></router-view>
+  <div id="app">
+
+    <hc-nav></hc-nav>
+
+    <main class="container">
+      <router-view></router-view>
+    </main>
+
   </div>
 </template>
 
 <script>
+import HcNav from '@/components/HcNav'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    'hc-nav': HcNav
+  }
 }
 </script>
 
