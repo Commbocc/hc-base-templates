@@ -1,7 +1,10 @@
 <template>
 	<div id="app">
-		<img src="./assets/logo.png">
-		<router-view></router-view>
+
+		<main>
+			<router-view></router-view>
+		</main>
+
 	</div>
 </template>
 
@@ -13,4 +16,12 @@ export default {
 
 <style lang="scss">
 @import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import "./assets/style/buttons";
+@import "./assets/style/navs";
+
+body {
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 </style>

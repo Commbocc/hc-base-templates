@@ -1,0 +1,14 @@
+// nav pills
+.nav-pills {
+	margin-bottom: $grid-gutter-width;
+
+	& > li {
+		border-bottom: solid 1px $brand-info;
+
+		a:hover, a:focus {
+			border-radius: 0;
+			background-color: rgba($brand-info, 0.15) !important;
+		}
+	}
+
+}

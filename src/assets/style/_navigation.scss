@@ -1,0 +1,108 @@
+#hc-navbar {
+	margin-bottom: 0;
+	position: relative;
+	border: 0;
+
+	// logo image
+	.navbar-brand {
+		padding: 10px 15px;
+		img {
+			height: 55px;
+			width: auto;
+		}
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			padding: 15px;
+			img {
+				height: 45px;
+			}
+		}
+	}
+
+	// search form
+	.navbar-form {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	// dropdown links
+	.dropdown, .hc-dropdown {
+		& > a {
+			font-weight: bold;
+		}
+	}
+
+	// desktop dropdowns
+	.hc-dropdown {
+		position: static;
+		border-bottom: 2px solid transparent;
+
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			font-size: 12px;
+		}
+
+		&:hover, &.open {
+			border-bottom-color: $brand-info;
+		}
+
+		//
+		&:nth-child(5n) > a {
+			color: $brand-primary !important;
+		}
+
+		&:hover:nth-child(5n), &.open:nth-child(5n) {
+			border-bottom-color: $brand-primary !important;
+		}
+
+		// //
+		// &:last-child {
+		// 	background: $brand-secondary;
+		// 	& > a {
+		// 		// color: #fff !important;
+		// 		color: $brand-info !important;
+		// 	}
+		// }
+		// &:hover:last-child, &.open:last-child {
+		// 	border-bottom-color: $brand-primary !important;
+		// 	& > a {
+		// 		color: $brand-primary !important;
+		// 	}
+		// }
+
+		//
+		@media (min-width: $screen-sm-min) {
+			& > .hc-dropdown-menu {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: ($navbar-height + 2); // navbar height + border
+				background: $body-bg;
+				background: rgba($body-bg, 0.975);
+				z-index: $zindex-dropdown;
+				overflow: hidden;
+
+				max-height: 0;
+				transition: max-height 0s;
+			}
+			&:hover > .hc-dropdown-menu {
+				padding: $grid-gutter-width;
+				padding-top: 0;
+				max-height: 750px;
+				transition: max-height 1s;
+				border-bottom: solid 1px $brand-secondary;
+			}
+		}
+	}
+
+	// pills
+	.nav-pills {
+		padding-top: 0;
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		-moz-column-count: 2; /* Firefox */
+		column-count: 2;
+		& > li {
+			-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+			page-break-inside: avoid; /* Firefox */
+			break-inside: avoid; /* IE 10+ */
+		}
+	}
+}
